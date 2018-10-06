@@ -1,0 +1,22 @@
+.category{
+  display: block;
+  height: 150px;
+  width: 160px;
+  border: 1px solid gray;
+  margin-top: 10px;
+  float: left;
+  padding: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+/* .category:hover{
+  background-color: aqua;
+} */
+.category .selected{
+  background-color: brown
+}
+/* #btn{
+ 
+  padding: 10px;
+  margin-right: 20px;
+} */
