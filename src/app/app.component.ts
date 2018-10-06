@@ -20,7 +20,7 @@ export class AppComponent {
     { id: 6, name: "Health", isSelected: false },
     { id: 7, name: "Charity", isSelected: false }
   ];
-  foods: Food[] = [
+  foods:  [
     { value: 'steak-0', viewValue: 'Steak' },
     { value: 'pizza-1', viewValue: 'Pizza' },
     { value: 'tacos-2', viewValue: 'Tacos' }
