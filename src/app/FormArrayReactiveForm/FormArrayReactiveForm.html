@@ -1,0 +1,33 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-lg-6 col-xs-12 col-s-12">
+       <h3 [ngStyle]="{'color':'green'}"> FormArray Reactive Form Example</h3>
+      <form [formGroup]="myForm">
+        <p> Form value is {{ myForm.value | json }}</p>
+        <div class="form-group">
+          <label for="email">email</label>
+          <input type="email" class="form-control" id="email" placeholder="email@example.com" formControlName="email">
+        </div>
+        <div formArrayName="contact">
+          <div *ngFor="let contact of contacts.controls; let i = index" [formGroupName]="i">
+          <div class="form-group">
+            <label for="area">Area</label>
+            <input class="form-control" id="area" formControlName="area">
+          </div>
+          <div class="form-group">
+            <label for="prefix">prefix</label>
+            <input class="form-control" id="prefix" formControlName="prefix">
+          </div>
+          <div class="form-group">
+            <label for="lineNo">lineNo</label>
+            <input class="form-control" id="lineNo" formControlName="lineNo">
+          </div>
+           <button type="submit" class="btn btn-warning" (click)="deleteContact(i)">Delete PhoneNo</button>
+        </div>
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="addContacts()">Add PhoneNo</button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '../../node_modules/@angular/router';
+
 
 
 @Component({
@@ -20,12 +20,12 @@ export class AppComponent {
     { id: 6, name: "Health", isSelected: false },
     { id: 7, name: "Charity", isSelected: false }
   ];
-  foods:  [
+  foods =  [
     { value: 'steak-0', viewValue: 'Steak' },
     { value: 'pizza-1', viewValue: 'Pizza' },
     { value: 'tacos-2', viewValue: 'Tacos' }
   ];
-  constructor(private router: Router) {}
+  constructor() {}
   move(data) {
     console.log("Hi" + data.value);
     //this.router.navigate(['/page1']);
