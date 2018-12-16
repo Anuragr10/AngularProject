@@ -1,12 +1,10 @@
 
-
-
 <div class="container">
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   
   <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item active">
+                  <li class="nav-item active">
         <a class="nav-link" href="#">AngularExp <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
@@ -15,6 +13,9 @@
       <li class="nav-item">
            <a class="nav-link" [routerLink]="['/FormArray']" >FormArrayExp</a>
       </li>
+      <li class="nav-item">
+           <a class="nav-link" [routerLink]="['/search']">GitHubUsers</a>
+      </li>
     </ul>
   </div>
 </nav>
@@ -22,3 +23,94 @@
 <router-outlet></router-outlet>
 </div>
 
+
+
+<!-- <h2>Template Driven Forms</h2>
+<br />
+<form class="form-horizontal" role="form" #myForm="ngForm" (ngSubmit)="onSubmit(myForm)" novalidate>
+
+  <div class="form-group">
+    <label for="firstname" class="col-sm-2 control-label">First Name</label>
+
+    <div class="col-sm-4">
+<input type="text" class="form-control" #myRef="ngModel" required minlength="4" forbiddenName="Bobb" id="firstname"
+  [ngClass]="{'error' : myRef.invalid && (myRef.touched || myRef.dirty)}"
+        name="firstName" ngModel>
+      
+      <div *ngIf="myRef.invalid && (myRef.touched || myRef.dirty)" class="alert alert-danger">
+        <div *ngIf="myRef.errors.required">
+          <p>Enter your Name</p>
+        </div>
+        <div *ngIf="myRef.errors.minlength">
+          <p>Enter atleast 4 charcaters</p>
+        </div>
+
+        <div *ngIf="myRef.errors.forbiddenName">
+          <p>Bob name is not coorrect</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="lastname" class="col-sm-2 control-label">Last Name</label>
+
+    <div class="col-sm-4">
+      <input type="text" class="form-control" id="lastname" name="lastName" ngModel>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="email" class="col-sm-2 control-label">Email</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" id="email" name="email" ngModel>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="city" class="col-sm-2 control-label">City</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" id="city" name="city" ngModel>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="pincode" class="col-sm-2 control-label">Pincode</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" #refCode="ngModel" require pattern="^[1-9][0-9]{4}$" id="pincode" name="pincode"
+        ngModel>
+      <div *ngIf="refCode.invalid && (refCode.touched || refCode.dirty)" class="alert alert-danger">
+        <div *ngIf="refCode.errors.pattern">
+          <p>Enter 5 digits</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label><input type="checkbox"> Remember me</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button [disabled]="!myForm.form.valid" type="submit" class="btn btn-primary">Sign in</button>
+
+    </div>
+  </div>
+
+</form> -->
+<!-- <button class="btn btn-primary">OK</button>
+<div class="container-flex">
+  <div class="col-lg-8 col-md-8">
+  <!<div class="box box1">One</div>
+    <div class="box box2">Two</div>
+    <div class="box box3">Three</div>
+    <div class="box box4">Four</div>
+    <div class="box box5">Five</div>
+    <div class="box box6">Six</div> -->
+  <!-- <div *ngFor="let item of categories">
+    <img src="../assets/Images/img{{item.id}}.jpg">
+    <span>{{item.name}}</span>
+  </div>
+</div>
+</div> --> 

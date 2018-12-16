@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
+
 
 
 
@@ -8,6 +10,12 @@ import { Component } from '@angular/core';
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
+
+  myForm: NgForm;
+  myName = 'Anurag';
+ 
+
+
   title = "app";
   isSelected = false;
   index = -1;
@@ -26,6 +34,10 @@ export class AppComponent {
     { value: 'tacos-2', viewValue: 'Tacos' }
   ];
   constructor() {}
+
+  onSubmit(myForm: NgForm) {
+    console.log(myForm);
+  }
   move(data) {
     console.log("Hi" + data.value);
     //this.router.navigate(['/page1']);

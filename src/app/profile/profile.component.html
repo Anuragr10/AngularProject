@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="card" style="width:200px" *ngIf="data">
+      <img class="card-img-top" src="{{data.avatar_url}}" alt="Card image" style="width:100%">
+      <div class="card-body">
+        <h4 class="card-title">{{data.id}}</h4>
+        <p class="card-text">{{data.name}}</p>
+        <p class="card-text">{{data.location}}</p>
+        <a href="#">{{data.repos_url}}</a>
+        <button class="btn btn-primary" [routerLink]="['/search']" routerLinkActive="router-link-active">Home</button>
+      </div>
+    </div>
+  </div>
+</div>
